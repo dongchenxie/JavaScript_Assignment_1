@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad()</script>
+</head>
+<style>
+  .wrapper{
+    width:900px;
+    margin:auto;
+    background-color: white;
+    padding:2rem;
+    padding-top:0rem;
+    border: 00.5rem;
+    border-style: solid;
+    border-color: cadetblue
+  }
+  body{
+    background-color: cornflowerblue;
+  }
+  h1{
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  }
+  h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.05rem;
+    border-bottom-color:darkcyan;
+    border-bottom-style: solid;
+    display:inline;
+  }
+  section{
+    border-color: cadetblue;
+    border-style: solid;
+    border-width: 0.05rem;
+    padding:0.8rem;
+    margin-bottom: 1rem;
+  }
+
+</style>
+<body>
+    <div class="wrapper"> 
+    <h1>Javascript Lesson 1 Assignemnt</h1>
+    <h4><i>Dongchen (Don) Xie, Jinhyuk(Peter) Choi </i></h4>
+    <section>
+      <h3>4 Important Objects</h3>
+      <ul>
+        <li>
+            Window : current window/tab
+        </li>
+        <li>
+            Document : current webpage &lt;html>...&lt;/html>
+        </li>
+        <li>
+        Style: CSS for that object
+      </li>
+      <li>
+        Navigator : browser itself
+      </li>
+      </ul>
+    </section>
+    <section>
+   
+    <h3>Ways to change style using JavaScript</h3>
+    <pre>
+    <code class="javascript">
+    document.body.bgColor='red';
+    document.body.style.backgroundColor='red';
+    /*the bottom line of code does the same job as above, but notice that there is no dash in JavaScript
+    we should use camel case instead*/ </code>
+    </pre>
+    </section>
+    <section>
+   
+    <h3>Two ways to show the data in JavaScript</h3>
+    <pre>
+    <code class="javascript">
+    console.log("Hello world!");
+    alert("Hello world");
+    </code>
+    </pre>
+    </section>
+    <section>
+    <h3>Dates in JavaScript</h3>
+    <p><br>Creating Date objects:</p>
+    <pre>
+    <code class="javascript">
+    let now=new Date()
+    /*Generate a Date object in javascript
+    with no parameter will get an Date object that
+    shows how many milliseconds pasted by 1st Jan, 1970 0:00
+    */
+    let newYear=new Date(2020,0,1);
+    /* A Date object can accpect parameters like Date(year,month,day,hour,minutes,second)*/ 
+    </code>
+    </pre>
+    <p>Caculate the duration between two days</p>
+    <pre>
+    <code class="javascript">
+    let now=new Date();
+    let newYear=new Date(2020,0,1);
+    /*copy from the previous code*/
+    let differece=newYear-now;//gets the difference in milliseconds;
+    let differenceInDays=differece/1000/60/60/24;//convert the difference to difference in days;
+    console.log(differenceInDays.toFixed(2));//round up the days to two decimals and print it in the console;
+    </pre>
+    </section>
+    <section>
+    <h3>Arrays and loops</h3>
+    <p><br>Pushing elements into the end of an array</p>
+    <pre>
+    <code class="javascript">
+    let array=[1,2,3,4];
+    console.log(array);//will print 1,2,3,4
+    array.push(5);//push 5 to the last postion of the array
+    console.log(array);//will print 1,2,3,4,5
+
+    </code>
+    </pre>
+    <p><br>Two ways to loop through an array</p>
+    <pre>
+    <code class="javascript" >
+    /*regular for loop, it will print 1234*/
+    let array=[1,2,3,4];
+    for(let var=i;i&lt;array.length;i++){
+      console.log(array[i]);
+    }
+    /*forEach loop, it will print 1234*/
+    array.forEach(a=>console.log(a));
+
+    </code>
+    </pre>
+    </section>
+    
+    </div>
+</body>
+</html>
